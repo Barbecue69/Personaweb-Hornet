@@ -5,13 +5,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Persona Web - Hornet</title>
         <link rel="stylesheet" href="estilo.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Birthstone&family=Delius&display=swap" rel="stylesheet">
     </head>
     <body>
-        <img src ="img/Hornet.webp" alt="Hornet-gostosa">
-        <div class=introducao>
-            No sombrio e enigmático mundo subterrâneo de <spam class="jogo">Hollow Knight</spam>, poucos personagens se destacam com tanta força e mistério quanto <spam class="personagem">Hornet</spam>. Com sua postura determinada, agilidade mortal e um passado envolto em segredos, Hornet cativa os jogadores desde seu primeiro encontro. Guardiã feroz dos caminhos esquecidos de Hallownest, ela não é apenas uma oponente formidável — mas também uma peça-chave nos segredos que envolvem o destino do reino. Seu estilo de luta elegante, sua voz afiada e seu olhar penetrante fazem dela uma personagem tão cativante quanto perigosa.
+        
+        <div class=introducao class="info">
+            <section class="img">
+                <img src ="img/Hornet.webp" alt="Hornet-gostosa" id="imagem">
+            </section>
+            <section class="descricao">  No sombrio e enigmático mundo subterrâneo de <spam class="jogo">Hollow Knight</spam>, poucos personagens se destacam com tanta força e mistério quanto <spam class="personagem">Hornet</spam>. Com sua postura determinada, agilidade mortal e um passado envolto em segredos, Hornet cativa os jogadores desde seu primeiro encontro. Guardiã feroz dos caminhos esquecidos de Hallownest, ela não é apenas uma oponente formidável — mas também uma peça-chave nos segredos que envolvem o destino do reino. Seu estilo de luta elegante, sua voz afiada e seu olhar penetrante fazem dela uma personagem tão cativante quanto perigosa.
+            </section>
         </div>
-        <div class="historia">
+        <div class="historia" class="info">
             <h1>História</h1>
             <ul>
                 <li>
@@ -24,7 +31,7 @@
                     Ao longo do jogo, Hornet se revela mais do que uma oponente: ela é alguém que entende os riscos envolvidos no futuro do reino e tenta influenciar o caminho do Cavaleiro, protegendo-o e ao mesmo tempo desafiando-o</li>
             </ul>
         </div>
-        <div class="habilidades">
+        <div class="habilidades" class="info">
             <h1>Habilidades</h1>
         <ul>
             <li>Atacar em várias direções com extrema agilidade</li>
@@ -33,7 +40,7 @@
             <li>Executar contra-ataques precisos que punem movimentos errados</li>
         </ul>
         </div>
-        <div class="caracteristicas">
+        <div class="caracteristicas" class="info">
             <h1>Caracteristicas</h1>
             <ul>
                 <li>Usa um vestido vermelho fluido, que lembra uma capa de inseto ou uma pétala</li>
@@ -41,7 +48,7 @@
                 <li>A agulha com fio faz referência ao ato de "costurar", remetendo à ideia de ela estar "costurando o destino" do reino</li>
             </ul>
         </div>
-        <div class="curiosidades">
+        <div class="curiosidades" class="info">
             <h1>Curiosidades</h1>
             <ul>
                 <li>Nome com significado: "Hornet" em inglês significa "vespa", mas o nome também carrega uma sonoridade aguda e afiada, refletindo seu estilo de luta e personalidade</li>
@@ -51,9 +58,33 @@
                 <li>Popularidade nas redes: Hornet é uma das personagens mais populares entre os fãs de Hollow Knight, frequentemente retratada em fanarts, cosplays e teorias sobre o universo do jogo
                 </li>
             </ul>
-            <br>
-        </div>
-        <br>
-        <br>
+        </div>  
+        <div class="silksong">
+            <h1>Silksong</h1>
+            <iframe width="100%" height="570px" src="https://www.youtube.com/embed/yQxwbZsL14Y?si=AdhLwzGan9sbmt3j&amp;start=15" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p class="anuncio">Silksong foi anunciado há: <span id="dias-decorridos"></span></p>
+        </div>     
+        <footer class="rodape">
+            <p>Criado por:<a href="https://github.com/Barbecue69" target="_blank" >Matheus Costa</a>. &copy; Todos direitos reservados</p>
+        </footer>
     </body>
     </html>
+    <script>
+        // Data do anúncio de Silksong
+        const dataAnuncio = new Date('2019-02-14T00:00:00');
+    
+        function atualizarDiasDecorridos() {
+          const agora = new Date();
+          const diferencaMs = agora - dataAnuncio;
+    
+          const dias = Math.floor(diferencaMs / (1000 * 60 * 60 * 24));
+    
+          const texto = `${dias} dia${dias !== 1 ? 's' : ''}`;
+    
+          document.getElementById("dias-decorridos").textContent = texto;
+        }
+    
+        atualizarDiasDecorridos();
+        // Atualizar uma vez por dia (opcional, mas deixei aqui caso queira manter a página aberta)
+        setInterval(atualizarDiasDecorridos, 1000 * 60 * 60 * 24);
+      </script>

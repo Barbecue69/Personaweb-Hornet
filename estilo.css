@@ -1,16 +1,43 @@
 body{
     background-color: #B3AAA3;
-    color: #B3AAA3;
+    color: #b85000;
+    margin: 0;
+    padding: 0;
 }
 h1{
-    color: #36505D
+    color: #36505D;
+    font-family: "Birthstone", cursive;
+    font-size: 60px;
+    margin-bottom: 5px;
 }
 div{
     background-color: #0B1E25;
     padding: 10px 20px;
-    margin: 10px;
+    margin: 20px;
     border-radius: 27px;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.534);
 }
-img{
-    margin-left: 30%;
+.img{
+    display: flex;
+    justify-content: center;
 }
+.img img{
+    box-shadow: black;
+}
+.introducao{
+    margin-top: 2%;
+}
+.rodape{
+    background-color: #0B1E25;
+    padding: 5px;
+}
+.personagem{
+    
+}
+ul{
+    margin-top: 1px;
+}
+.anuncio{
+    font-size: 20px;
+}
+
